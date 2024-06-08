@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple webpage example using HTML and CSS">
+    <title>Neelesh Webpage</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            margin: 20px 0;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 5px 0 2px;
+        }
+
+        form input, form textarea, form button {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        form button:hover {
+            background-color: red;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            form {
+                width: 100%;
+            }
+
+            form input, form textarea, form button {
+                width: 100%;
+            }
+
+            header {
+                flex-direction: column;
+            }
+
+            header img {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            form input, form textarea {
+                padding: 6px;
+            }
+
+            form button {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Designer (4).png" alt="Website Logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to My Simple Webpage</h1>
+        <section id="home" aria-labelledby="home-heading">
+            <h2 id="home-heading">Home</h2>
+            <p>This is the home section of the webpage. It contains an introduction and some basic information.</p>
+        </section>
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p>This section contains information about the purpose of the webpage and its creator.</p>
+        </section>
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <p>This section provides contact information and a form to reach out.</p>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Simple Webpage. All rights reserved.</p>
+    </footer>
+</body>
+</html>
